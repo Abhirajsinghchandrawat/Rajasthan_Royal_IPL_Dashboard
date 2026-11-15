@@ -1,0 +1,1 @@
+"""Data quality and cricket-rule validation."""

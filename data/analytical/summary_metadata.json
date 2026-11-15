@@ -1,0 +1,110 @@
+{
+  "validation_status": "VALIDATED",
+  "all_checks_passed": true,
+  "n_checks_total": 23,
+  "n_checks_passed": 23,
+  "total_matches_raw": 883,
+  "official_scope_matches": 837,
+  "analysed_pressure_matches": 837,
+  "total_deliveries_raw": 200999,
+  "official_regulation_deliveries": 193988,
+  "pressure_eligible_deliveries": 193842,
+  "pressure_deliveries_bat": 67868,
+  "high_pressure_deliveries_bat": 23296,
+  "pressure_share_bat": 0.3501202009884339,
+  "high_pressure_share_bat": 0.12018035307105787,
+  "pressure_deliveries_bowl": 66671,
+  "high_pressure_deliveries_bowl": 23082,
+  "pressure_share_bowl": 0.3439450686641698,
+  "high_pressure_share_bowl": 0.1190763611601201,
+  "thresholds": {
+    "elevated": 52.0,
+    "high": 66.1,
+    "method": "pooled batting PI quantiles 0.65/0.88",
+    "n_deliveries": 193842
+  },
+  "batting_meta": {
+    "kind": "batting",
+    "z": 1.2816,
+    "scale": 100.0,
+    "prior_pressure": {
+      "mu": 0.04882663121726055,
+      "tau2": 0.009998315546836813
+    },
+    "prior_normal": {
+      "mu": 0.050023635355494936,
+      "tau2": 0.017486366297770298
+    },
+    "n_eligible": 177,
+    "quadrant_perf_threshold": 3.854457988000198,
+    "quadrant_reliability_threshold": 0.46153846153846156
+  },
+  "bowling_meta": {
+    "kind": "bowling",
+    "z": 1.2816,
+    "scale": 24.0,
+    "prior_pressure": {
+      "mu": 0.0056023245995918,
+      "tau2": 0.004317926706841099
+    },
+    "prior_normal": {
+      "mu": 0.013276009605364082,
+      "tau2": 0.009596714221706612
+    },
+    "n_eligible": 162,
+    "quadrant_perf_threshold": 0.1490708678616922,
+    "quadrant_reliability_threshold": 0.5428571428571428
+  },
+  "pressure_meta": {
+    "leverage_reference": {
+      "1": 0.010946600424399999,
+      "2": 0.013711372745423982
+    },
+    "format_multiplier": {
+      "IPL": 1.035015671067169,
+      "T20I": 0.9724796446655315
+    },
+    "corr_pi_vs_current_rr_inn1": -0.7307313187186246,
+    "corr_pi_vs_par_dev_inn1": -0.8035097042942605
+  },
+  "extras_verification": {
+    "other_extras": {
+      "other_rows": 264,
+      "other_extras1_always_1": true,
+      "overstep_extras1_always_1": true,
+      "other_mean_runs": 1.561,
+      "overstep_mean_runs": 1.479,
+      "other_top_delivery_styles": {
+        "Beamer": 116,
+        "Full Toss": 72,
+        "Bouncer": 16,
+        "Slow Bouncer": 8,
+        "Off Cutter": 7,
+        "Seamed In": 6,
+        "Back of Hand": 5,
+        "Leg Cut": 3,
+        "Googly": 3,
+        "Leg Break": 3
+      },
+      "innings_over_120_legal_if_other_legal": 150,
+      "innings_over_120_legal_if_other_noball": 0,
+      "classification": "no_ball"
+    },
+    "extras_2_runs": {
+      "rows": 36,
+      "extras_types": {
+        "Overstep": 21,
+        "other": 14,
+        "none": 1
+      },
+      "runs_all_zero": true,
+      "extras2_values": {
+        "1": 20,
+        "4": 16
+      },
+      "boundary_flags_on_rows": 0,
+      "interpretation": "Runs taken off a no-ball that did not come off the bat (bye/leg-bye off a no-ball): always on no-ball families and only when runs==0. Counted in team runs; not charged to the bowler (Law 18/22 accounting: byes/leg-byes off no-balls are scored as no-ball extras for the team but only the 1-run penalty is debited to the bowler)."
+    }
+  },
+  "elapsed_seconds": 107.31
+}

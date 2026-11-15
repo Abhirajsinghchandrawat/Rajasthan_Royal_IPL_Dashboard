@@ -1,0 +1,4 @@
+column,missing,missing_plus_blank_like,pct_missing,n_unique,dtype
+comp_id,0,0,0.0,141,int64
+team_id,0,0,0.0,38,int64
+team_name,0,0,0.0,38,object

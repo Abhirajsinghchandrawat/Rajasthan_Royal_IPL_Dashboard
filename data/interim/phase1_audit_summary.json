@@ -1,0 +1,462 @@
+{
+  "inventory": [
+    {
+      "table": "competitions",
+      "n_records": 141,
+      "n_columns": 4,
+      "columns_match_spec": true,
+      "unexpected_columns": [],
+      "missing_columns": [],
+      "duplicate_full_rows": 0
+    },
+    {
+      "table": "teams",
+      "n_records": 353,
+      "n_columns": 3,
+      "columns_match_spec": true,
+      "unexpected_columns": [],
+      "missing_columns": [],
+      "duplicate_full_rows": 0
+    },
+    {
+      "table": "matches",
+      "n_records": 883,
+      "n_columns": 22,
+      "columns_match_spec": true,
+      "unexpected_columns": [],
+      "missing_columns": [],
+      "duplicate_full_rows": 0
+    },
+    {
+      "table": "ball_by_ball",
+      "n_records": 200999,
+      "n_columns": 33,
+      "columns_match_spec": true,
+      "unexpected_columns": [],
+      "missing_columns": [],
+      "duplicate_full_rows": 0
+    },
+    {
+      "table": "player_mapping",
+      "n_records": 6413,
+      "n_columns": 6,
+      "columns_match_spec": true,
+      "unexpected_columns": [],
+      "missing_columns": [],
+      "duplicate_full_rows": 0
+    },
+    {
+      "table": "playing_eleven",
+      "n_records": 28381,
+      "n_columns": 9,
+      "columns_match_spec": true,
+      "unexpected_columns": [],
+      "missing_columns": [],
+      "duplicate_full_rows": 0
+    }
+  ],
+  "scope": {
+    "match_scope": [
+      {
+        "scope_group": "IPL",
+        "n_matches": 371,
+        "n_competitions": 5
+      },
+      {
+        "scope_group": "Other T20",
+        "n_matches": 30,
+        "n_competitions": 2
+      },
+      {
+        "scope_group": "T20I",
+        "n_matches": 482,
+        "n_competitions": 131
+      }
+    ],
+    "date_min": "2022-01-22",
+    "date_max": "2026-11-01",
+    "official_matches": 853,
+    "official_bbb_records": 194014,
+    "other_t20_matches": 30,
+    "total_matches": 883,
+    "total_bbb": 200999,
+    "format_counts": {
+      "T20I": 134,
+      "T20": 7
+    },
+    "competition_count": 141
+  },
+  "relationships": {
+    "match_comp_ids_missing_from_competitions": 0,
+    "competition_ids_with_no_matches": 3,
+    "teams_comp_ids_missing": 0,
+    "match_home_team_not_in_teams_for_comp": null,
+    "bbb_match_ids_missing_from_matches": 0,
+    "matches_without_bbb": 16,
+    "xi_match_ids_missing_from_matches": 0,
+    "matches_without_xi": 3,
+    "official_matches": 853,
+    "official_bbb_records": 194014,
+    "other_t20_matches": 30,
+    "date_min": "2022-01-22",
+    "date_max": "2026-11-01",
+    "home_team_not_in_comp_teams": 0,
+    "away_team_not_in_comp_teams": 0,
+    "bbb_team_not_in_match_home_away": 0,
+    "bbb_same_batting_bowling_team": 0,
+    "bbb_player_ids": 959,
+    "mapping_player_ids": 1217,
+    "xi_player_ids": 1082,
+    "bbb_players_not_in_mapping": 0,
+    "bbb_players_not_in_xi": 2,
+    "mapping_players_never_in_bbb": 258
+  },
+  "quality": {
+    "duplicate_match_ids": 0,
+    "duplicate_delivery_key_rows": 0,
+    "duplicate_innings_ball_key_rows": 0,
+    "duplicate_xi_keys": 75,
+    "duplicate_mapping_keys": 0,
+    "missing_match_id_bbb": 0,
+    "missing_striker_id": 0,
+    "missing_non_striker_id": 0,
+    "missing_bowler_id": 0,
+    "invalid_innings": 0,
+    "innings_value_counts": {
+      "1": 105727,
+      "2": 95234,
+      "3": 25,
+      "4": 13
+    },
+    "overid_min": 1,
+    "overid_max": 20,
+    "over_ball_num_min": 1,
+    "over_ball_num_max": 13,
+    "negative_runs": 0,
+    "negative_extras1": 0,
+    "negative_extras2": 0,
+    "overid_outside_1_20_reg": 0,
+    "over_ball_num_outside_1_15": 0
+  },
+  "cricket": {
+    "extras_type_counts": {
+      "(none)": 189167,
+      "wide": 7714,
+      "legbyes": 2748,
+      "Overstep": 576,
+      "byes": 529,
+      "other": 264,
+      "Penalty": 1
+    },
+    "extras_family_counts": {
+      "none": 189167,
+      "wide": 7714,
+      "leg_bye": 2748,
+      "no_ball": 576,
+      "bye": 529,
+      "other": 264,
+      "penalty": 1
+    },
+    "dismissal_type_counts": {
+      "(none)": 190118,
+      "Caught": 7557,
+      "Bowled": 1775,
+      "LBW": 709,
+      "RunOut": 600,
+      "Stump": 214,
+      "Hit Wicket": 17,
+      "Retire Out": 6,
+      "Obstracting the field": 2,
+      "Obstructing the field": 1
+    },
+    "dismissal_family_counts": {
+      "none": 190118,
+      "bowler_credited": 10058,
+      "unclassified": 822,
+      "non_bowler": 1
+    },
+    "wicket_without_dismissal_type": 0,
+    "dismissal_type_without_is_wicket": 0,
+    "wicket_without_dismissed_player": 1,
+    "dismissed_player_without_is_wicket": 12,
+    "dismissed_player_not_striker_or_nonstriker": 0,
+    "legal_delivery_count": 192709,
+    "illegal_delivery_count": 8290,
+    "boundary_four_runs_not_4_on_no_extra": 0,
+    "boundary_six_runs_not_6_on_no_extra": 0,
+    "both_four_and_six": 0,
+    "is_wicket_true": 10881
+  },
+  "runs_encoding": {
+    "boundary_alignment": [
+      {
+        "candidate": "runs",
+        "four_eq_4_rate": 1.0,
+        "six_eq_6_rate": 1.0,
+        "nonboundary_in_0_3_rate": 0.999708923319487,
+        "negative_count": 0
+      },
+      {
+        "candidate": "runs_minus_extras1",
+        "four_eq_4_rate": 0.9947171756216983,
+        "six_eq_6_rate": 0.9943017719147608,
+        "nonboundary_in_0_3_rate": 0.9308268396955823,
+        "negative_count": 11359
+      },
+      {
+        "candidate": "extras2_as_batter",
+        "four_eq_4_rate": 0.0,
+        "six_eq_6_rate": 0.0,
+        "nonboundary_in_0_3_rate": 0.999902974439829,
+        "negative_count": 0
+      },
+      {
+        "candidate": "runs_if_no_extra_else_extras2",
+        "four_eq_4_rate": 0.9947171756216983,
+        "six_eq_6_rate": 0.9943017719147608,
+        "nonboundary_in_0_3_rate": 0.9996118977593159,
+        "negative_count": 0
+      },
+      {
+        "candidate": "runs_if_legal_extra_keep_runs",
+        "four_eq_4_rate": 0.9965210668728257,
+        "six_eq_6_rate": 0.9963312778081337,
+        "nonboundary_in_0_3_rate": 0.999708923319487,
+        "negative_count": 0
+      }
+    ],
+    "both_extras_nonzero_n": 35,
+    "both_extras_by_type": {
+      "Overstep": 21,
+      "other": 14
+    },
+    "negative_runs": 0
+  },
+  "reconciliation": {
+    "innings_pairs": 867,
+    "complete_two_innings": 845,
+    "result_by_runs_n": 411,
+    "result_by_wickets_n": 411,
+    "win_by_runs_match_a": 24,
+    "win_by_runs_match_b": 375,
+    "win_by_runs_match_c": 401,
+    "win_by_wickets_score_ok_a": 258,
+    "win_by_wickets_score_ok_b": 397,
+    "win_by_wickets_score_ok_c": 399,
+    "revised_chase_ok_a": 2,
+    "revised_chase_ok_b": 11,
+    "revised_chase_ok_c": 11,
+    "by_runs_denom": 411,
+    "by_runs_hit_rate_a": 0.058394160583941604,
+    "by_runs_hit_rate_b": 0.9124087591240876,
+    "by_runs_hit_rate_c": 0.975669099756691
+  },
+  "super_overs": {
+    "n_matches": 6,
+    "match_ids": [
+      34429,
+      40725,
+      45512,
+      48027,
+      48029,
+      50359
+    ],
+    "innings_3_rows": 25,
+    "innings_4_rows": 13,
+    "matches_with_gt_2_distinct_innings": 6
+  },
+  "revised": {
+    "n_revised_overs_matches": 34,
+    "n_revised_target_matches": 23,
+    "first_revised_unique": [
+      30.0,
+      42.0,
+      48.0,
+      54.0,
+      60.0,
+      66.0,
+      72.0,
+      78.0,
+      84.0,
+      90.0,
+      102.0,
+      108.0,
+      114.0
+    ],
+    "second_revised_unique": [
+      30.0,
+      42.0,
+      48.0,
+      54.0,
+      60.0,
+      66.0,
+      72.0,
+      78.0,
+      84.0,
+      90.0,
+      102.0,
+      114.0
+    ],
+    "inn1_legal_eq_decimal": 0,
+    "inn2_legal_eq_decimal": 0,
+    "inn1_legal_eq_int_balls": 14,
+    "inn2_legal_eq_int_balls": 13,
+    "inn1_maxover_eq_value": 0,
+    "inn2_maxover_eq_value": 0
+  },
+  "playing_xi": {
+    "n_rows": 28381,
+    "n_unique_match_team_player": 28341,
+    "duplicate_key_rows": 75,
+    "played_values": {
+      "True": 19714,
+      "False": 8667
+    },
+    "impact_values": {
+      "0": 27823,
+      "1": 558
+    },
+    "impact_off_values": {
+      "0": 27823,
+      "1": 558
+    },
+    "match_team_row_dist": {
+      "10": 1,
+      "11": 569,
+      "12": 141,
+      "13": 7,
+      "14": 34,
+      "15": 215,
+      "16": 162,
+      "17": 91,
+      "18": 31,
+      "19": 19,
+      "20": 63,
+      "21": 23,
+      "22": 43,
+      "23": 48,
+      "24": 56,
+      "25": 250,
+      "26": 6,
+      "27": 1
+    },
+    "match_team_played_dist": {
+      "0": 23,
+      "10": 1,
+      "11": 1168,
+      "12": 556,
+      "13": 6,
+      "16": 1,
+      "17": 3,
+      "19": 1,
+      "20": 1
+    },
+    "teams_not_11_played": 592,
+    "bbb_players_not_in_xi": 6,
+    "bbb_but_is_played_false_or_missing": 6,
+    "matches_without_xi": 3,
+    "xi_matches_not_in_matches": 0
+  },
+  "identity": {
+    "player_ids_with_multiple_names": 1,
+    "player_names_with_multiple_ids": 7
+  },
+  "innings_ball_num": {
+    "reg_legal_groups": 1712,
+    "max_eq_legal_count": 58,
+    "max_eq_delivery_count": 58
+  },
+  "completeness": {
+    "matches_missing_inn1_bbb": 16,
+    "matches_missing_inn2_bbb": 38,
+    "matches_missing_inn1_ids": [
+      31281,
+      31284,
+      31288,
+      32610,
+      32612,
+      32622,
+      36210,
+      36564,
+      38797,
+      40761,
+      41502,
+      41503,
+      42030,
+      46008,
+      48513,
+      50189
+    ],
+    "matches_missing_inn2_ids": [
+      15410,
+      15546,
+      20226,
+      21406,
+      28333,
+      31281,
+      31284,
+      31288,
+      31707,
+      32610,
+      32612,
+      32622,
+      35424,
+      36210,
+      36564,
+      37353,
+      38797,
+      39983,
+      39985,
+      40748,
+      40751,
+      40761,
+      41502,
+      41503,
+      41975,
+      41979,
+      42030,
+      45390,
+      45908,
+      46008,
+      46311,
+      46747,
+      46749,
+      47968,
+      48513,
+      50136,
+      50189,
+      50408
+    ]
+  },
+  "flag_summary": [
+    {
+      "flag": "MATCH_NO_BBB",
+      "n": 16
+    },
+    {
+      "flag": "MISSING_FIRST_INNINGS_BBB",
+      "n": 16
+    },
+    {
+      "flag": "MISSING_SECOND_INNINGS_BBB",
+      "n": 38
+    },
+    {
+      "flag": "OUT_OF_OFFICIAL_SCOPE",
+      "n": 30
+    },
+    {
+      "flag": "REVISED_OVERS",
+      "n": 34
+    },
+    {
+      "flag": "REVISED_TARGET",
+      "n": 23
+    },
+    {
+      "flag": "SUPER_OVER",
+      "n": 6
+    }
+  ],
+  "n_flag_rows": 163
+}

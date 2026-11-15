@@ -1,0 +1,7 @@
+table,n_records,n_columns,columns_match_spec,unexpected_columns,missing_columns,duplicate_full_rows
+competitions,141,4,True,[],[],0
+teams,353,3,True,[],[],0
+matches,883,22,True,[],[],0
+ball_by_ball,200999,33,True,[],[],0
+player_mapping,6413,6,True,[],[],0
+playing_eleven,28381,9,True,[],[],0

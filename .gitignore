@@ -1,0 +1,24 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Temporary scratch & duplicate archive files (>100MB or redundant zip)
+data/interim/_tmp_*.pkl
+6af458274c1e8_data_pack/
+6af458274c1e8_data_pack.zip
+data/raw/data_pack.zip
+
+# OS / Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
