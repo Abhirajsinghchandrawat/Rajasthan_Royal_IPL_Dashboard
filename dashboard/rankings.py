@@ -139,6 +139,45 @@ def render_rankings(filters: dict) -> None:
             mime="text/csv",
         )
 
+    with st.expander("Rajasthan Royals IPL 2027 Squad Requirements (Reqs A–D) & Top 10 Data-Backed Auction Recommendations", expanded=True):
+        st.markdown(
+            """
+            *Performance-led auction targets, subject to final squad composition, availability and auction budget.*
+
+            **1. Verified Rajasthan Royals Pressure Diagnostics (IPL 2022–2025 & IPL 2025 Data):**
+            - **Incumbent RR Core (Retain, Do Not Re-Buy):** RR's IPL 2025 squad already features **#1 Batter Yashasvi Jaiswal** (`+46.99` CABV/100b in 2025; Powerplay `+46.91` career), **#9 Batter Riyan Parag** (`+90.85` CABV/100b in 2025; Middle `+18.87` career), Dhruv Jurel (`+13.78`), emerging opener **#19 Vaibhav Sooryavanshi** (`RPR +1.87`, `APR +13.52`), Sandeep Sharma (`+5.64` RP/24b in 2025), and **#8 Bowler Maheesh Theekshana**.
+            - **Four Quantified RR Squad Requirements:**
+              - **Req A · Death-Over Finishing (`No. 5–7`):** IPL 2025 Death batting under pressure fell to **`−9.53` CABV/100b** (`SR 146.6`, dismissal rate `8.27/100b`; Hetmyer `−18.47`, Rana `−18.14`, Shubham Dubey `−35.45`).
+              - **Req B · Middle-Over Spin Hitting (`No. 4–5`):** IPL 2022–2025 Middle batting averaged **`−9.16` CABV/100b** (`SR 123.6` across `1,135` pressure balls).
+              - **Req C · Middle-Over Spin Control & Wickets (`Overs 7–15`):** IPL 2025 Middle bowling dropped to **`−1.65` RP/24b** (`Econ 9.94`, wicket rate `3.17/100b` post-Ashwin/Chahal; Theekshana posted `−4.85` RP/24b for RR in 2025).
+              - **Req D · Powerplay & Death Pace Execution:** IPL 2025 pressure bowling fell to **`−2.18` RP/24b in Powerplay** (`Econ 10.32`) and **`−1.97` RP/24b at Death** (`Econ 13.01`; Farooqi `−20.40`, Deshpande `−5.97`, Archer `−0.74`).
+            - **Why Raw Leaderboard Names Are Filtered Out:** Excludes incumbent RR players (`#1 Jaiswal`, `#9 Parag`, `#8 Theekshana`), single-franchise untouchables used as valuation benchmarks (`#1 Jasprit Bumrah`, `#2 Sunil Narine`, `#3 Suryakumar Yadav`), redundant openers (`#4 Abhishek Sharma`, `#8 Nissanka`, `#12 Sudharsan`, `#10 Inglis`), IPL-ineligible Pakistan T20I players (`#10 Haris Rauf`), and retired IPL veterans (`#3 R. Ashwin`, `#7 Tim Southee`).
+            """
+        )
+        rr_shortlist = pd.DataFrame(
+            [
+                (1, "Tim David", "RHB Death Finisher (No. 6 · Bat #2)", "+13.48 CABV", "+23.22", "+0.71", "56.5%", "455b (46m)", "Req A · Death Finishing (+44.59 Death CABV/100b on 225b)", "Core Target", "Overseas slot; high retention/auction price tier"),
+                (2, "Axar Patel", "SLA Spin All-Rounder (Bowl #5)", "+0.46 RP", "+1.86", "+1.55", "65.3%", "823b (75m)", "Req C & B · Mid Spin Control (+2.94 Mid RP/24b on 504b) + LHB", "Core Target", "Marquee Indian AR; requires trade or mega-auction release"),
+                (3, "Heinrich Klaasen", "WK / Middle Enforcer (No. 5 · Bat #5)", "+8.91 CABV", "+16.98", "−4.23", "60.5%", "452b (38m)", "Req B & A · Mid Spin Hitting (25.0% Dot%, +20.45 Mid / +41.87 Death)", "Core Target", "PRD −4.23 reflects +21.22 normal baseline; premium overseas cost"),
+                (4, "Rajat Patidar", "Indian RHB No. 4 Batter (Bat #6)", "+8.86 CABV", "+17.95", "+0.01", "65.2%", "326b (23m)", "Req B · Domestic No. 4 Stabiliser (3.07 outs/100b, +39.89 Mid CABV)", "Core Target", "23 pressure matches (wider 90% CI [+6.28, +29.62] than 50m peers)"),
+                (5, "Mustafizur Rahman", "Left-Arm Pace & Cutter (Bowl #4)", "+0.50 RP", "+1.84", "−1.21", "60.4%", "555b (48m)", "Req D · Left-Arm & Death Pace (PP +1.21, Mid +8.66, Death +1.06 RP/24b)", "Core Target", "Overseas NOC windows; 16.9% boundary rate on flat tracks"),
+                (6, "Andre Russell", "Pace Power All-Rounder (No. 7 · Bat #7)", "+8.07 CABV", "+17.94", "+0.03", "59.4%", "318b (32m)", "Req A & D · Finisher + Seam Depth (+43.41 Mid / +29.26 Death CABV)", "Role-Specific", "Higher dismissal rate (5.35/100b) and workload management"),
+                (7, "Ravi Bishnoi", "Indian Leg-Break Strike (Bowl #11)", "+0.03 RP", "+1.52", "+1.50", "67.2%", "647b (61m)", "Req C · Domestic Wrist-Spin Strike (5.87 wkts/100b; Mid +2.73, Death +7.41)", "Role-Specific", "Conservative RPR (+0.03) due to leg-spin match variance"),
+                (8, "Rashid Khan", "Leg-Break All-Phase Spinner (Bowl #9)", "+0.21 RP", "+1.70", "−1.84", "67.2%", "718b (61m)", "Req C & A · Marquee Spin (+4.49 Mid / +4.43 Death RP/24b, 34 wkts)", "Role-Specific", "Occupies overseas slot; requires trade/auction release"),
+                (9, "Rovman Powell", "RHB Power Finisher (No. 5–6 · Bat #11)", "+5.07 CABV", "+12.28", "+5.20", "53.3%", "651b (60m)", "Req A · Accessible Death Finisher (+39.08 Death CABV/100b on 196b)", "Alternative", "Modest middle-over rate (+2.24 on 377b); deploy at Over 14+"),
+                (10, "Nathan Ellis", "Right-Arm Death/PP Pace (Bowl #15)", "−0.21 RP", "+1.43", "+0.45", "61.5%", "334b (26m)", "Req D · Death/PP Pace (6.59 wkts/100b, +4.70 Death RP/24b; w/ #6 Ngarava)", "Alternative", "26 pressure matches leave RPR at −0.21 despite +1.43 APR"),
+            ],
+            columns=["Rec #", "Player", "Specialist Role & Rank", "RPR", "Shrunk APR", "PRD", "Match Succ%", "Sample", "RR Requirement & Tactical Fit", "Priority", "Key Caveat / Trade-Off"],
+        )
+        st.dataframe(rr_shortlist, use_container_width=True, hide_index=True)
+        st.download_button(
+            "Download Top 10 RR IPL 2027 Auction Recommendations (CSV)",
+            rr_shortlist.to_csv(index=False).encode("utf-8"),
+            file_name="rr_ipl2027_top10_auction_recommendations.csv",
+            mime="text/csv",
+            key="dl_rr_auction_top10",
+        )
+
     st.markdown("---")
     st.markdown("### Interactive Leaderboard Explorer (Search, Sort, Format Slice & Export)")
 

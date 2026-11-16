@@ -103,6 +103,23 @@ def render_overview(filters: dict) -> None:
         f"(RPR <b>{w1['rpr']:+.2f}</b>, Shrunk APR <b>{w1['rating_mean']:+.2f}</b> Runs Prevented/24 deliveries across {int(w1['p_matches'])} matches)."
     )
 
+    with st.expander("Plain-English Metric Decoder & Key Model Trade-Offs (How to Read PressureIQ)", expanded=False):
+        st.markdown(
+            """
+            **Plain-English Metric Decoder:**
+            - **Pressure Index (`PI`, 0–100):** *How hard is the match state right now, provided the contest is still alive?* Computed strictly before the ball is bowled from required runs/par deficit, overs/wickets left, and next-ball win-probability leverage (`Elevated ≥ 52.0`, `High ≥ 66.1`).
+            - **Context-Adjusted Value (`CABV / 100b` for Batters · `RP / 24b` for Bowlers):** *How many runs better or worse was the player than an average peer in the exact same format, innings, phase, wickets, and pressure state?* Scaled per `100` balls faced (batting) or `24` deliveries / 4-over spell (bowling), including marginal wicket credit/cost (`0.30 × WV` bat, `0.20 × WV` bowl).
+            - **Shrunk Pressure Skill (`APR` / `rating_mean`):** *Our best estimate of true pressure skill after Empirical Bayes (`EB`) shrinks noisy small-sample rates toward the eligible cohort average.*
+            - **Reliable Pressure Rating (`RPR` — Official Ranking Metric):** *The safe minimum output we can bank on with 90% confidence (`APR − 1.2816 × SD`).* Penalises small match counts and high match-to-match variance so one-off cameos cannot top the leaderboard.
+            - **Pressure Response Delta (`PRD`):** *How much a player rises (`> 0`) or dips (`< 0`) under pressure compared with their own shrunk normal-state baseline (`APR_pressure − Shrunk_Normal`).*
+
+            **Key Model Trade-Offs & Limitations:**
+            1. **Conservatism vs Breakout Talent (`RPR` vs `APR`):** Because `RPR` subtracts `1.2816 × SD`, players with ~20–25 pressure matches (e.g. `#6 Rajat Patidar`, `APR +17.95`, `23m`; `#19 Vaibhav Sooryavanshi`, `APR +13.52`, `23m`) receive a larger uncertainty penalty than 50+ match veterans. Pair `APR` with `RPR` when scouting emerging players.
+            2. **Differential Shrinkage in `PRD`:** Normal states have ~2× more balls (`65%` vs `35%`) and `2.2×` larger between-player variance, retaining more signal (`median B_norm = 0.56` vs `B_press = 0.26`). Historic normal-state outliers (`#1 Jasprit Bumrah`, `+5.00` shrunk normal vs `+2.65` pressure; `#3 Suryakumar Yadav`, `+26.68` normal vs `+19.11` pressure) show negative `PRD` (`−2.35` and `−7.57`) due to their extraordinary normal baseline and stronger pressure shrinkage—not weak pressure play.
+            3. **From Pressure Leaderboard to Franchise Auction Shortlist:** Pooling `371` IPL + `482` T20I matches maximises pressure sample depth, but actionable franchise recruitment must filter out incumbent roster players, redundant roles, and T20I-only players ineligible for the IPL (see **Section 05 · Player Rankings** for the **Rajasthan Royals IPL 2027 Auction Shortlist**).
+            """
+        )
+
     # Row 1: Top 3 podium cards + Top 10 horizontal leaderboards
     c1, c2 = st.columns(2)
     with c1:
