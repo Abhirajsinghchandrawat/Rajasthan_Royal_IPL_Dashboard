@@ -1,6 +1,6 @@
 # PRESSUREIQ — Cricket Pressure Performance Intelligence Platform
 
-> *"The science of performing when it matters."*
+> *"The science of performing when it matters."*  LINK: https://rajasthanroyalipldashboard.streamlit.app/
 
 **PRESSUREIQ** is an end-to-end cricket performance intelligence and decision-support platform engineered to identify the **Top 10 most reliable batters** and **Top 10 most reliable bowlers** under pressure across **853 official IPL and T20 International matches (2022–2026)**.
 
